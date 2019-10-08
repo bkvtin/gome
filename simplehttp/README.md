@@ -34,3 +34,7 @@ Connected to MongoDB!
 Inserted document:  ObjectID("5d9c23a692ef923710663601")
 Inserted document:  ObjectID("5d9c23a692ef923710663602")
 ```
+```sh
+$ curl http://localhost:8080/api/v1/getstds
+{"users":[{"name":"Elliot","type":"Reader","Age":23,"social":"https://facebook.com"},{"name":"Fraser","type":"Author","Age":17,"social":"https://facebook.com"}]}%
+```
