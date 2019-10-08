@@ -1,0 +1,8 @@
+FROM golang:alpine
+
+ENV go_path /go/src/github.com/bkvtin/gome/simplehttp
+
+RUN mkdir -p $go_path
+ADD . $go_path
+WORKDIR $go_path
+CMD ["go", "run", "main.go"]

@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile_api
+    ports:
+    - "8080:8080"
+    depends_on:
+    - mongo
+
+  client:
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile_client
+    command: "360000"
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example

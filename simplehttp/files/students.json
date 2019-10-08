@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "tin",
+      "type": "student",
+      "age": 10,
+      "social": "https://facebook.com"
+    },
+    {
+      "name": "thang",
+      "type": "teacher",
+      "age": 10,
+      "social": "https://facebook.com"
+    }
+  ]
+}

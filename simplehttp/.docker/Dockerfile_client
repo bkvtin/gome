@@ -1,0 +1,12 @@
+FROM golang:1.13.1
+
+ENV go_path /go/src/github.com/bkvtin/gome/simplehttp
+
+RUN mkdir -p $go_path
+ADD . $go_path
+WORKDIR $go_path/modules
+RUN go get go.mongodb.org/mongo-driver/mongo
+
+
+CMD ["/bin/sleep"]
+ENTRYPOINT ["/bin/sleep"]
